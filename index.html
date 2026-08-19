@@ -1,162 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="description"
+    content="Akhand Soni — Software Engineering student at VIT Vellore. Exploring AI/ML, backend systems and creative interfaces.">
+  <meta name="theme-color" content="#090a0b">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Akhand Soni — Developer Portfolio">
+  <meta property="og:description"
+    content="Software Engineering student at VIT Vellore — building things worth exploring.">
+  <meta property="og:url" content="https://akhandsoni.dev">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Akhand Soni — Developer Portfolio">
+  <meta name="twitter:description"
+    content="Software Engineering student at VIT Vellore — building things worth exploring.">
+
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23090a0b' width='100' height='100' rx='18'/><text x='50' y='68' text-anchor='middle' fill='%23d8bd7d' font-family='system-ui' font-weight='600' font-size='52'>A</text></svg>">
+
+  <title>Akhand Soni — Developer Portfolio</title>
   <link rel="stylesheet" href="./style.css">
-  
-  <title>Akhand.Dev</title>
 </head>
+
 <body>
-  <div class="navbar">
-    <div class="webname">
-      <a class="navs" data-section="container"><h1>Akhand.Dev</h1></a>
+  <!-- Intro loader curtain -->
+  <div class="intro-loader" id="introLoader">
+    <div class="intro-logo">AKHAND<span>.ME</span></div>
+    <div class="intro-bar">
+      <div class="intro-bar-fill"></div>
     </div>
-    <input type="checkbox" id="menu_toggle">
-    <label for="menu_toggle" class="menu_icon">
-      <img src="./assets/images/arrow.png" alt="">
-    </label>
-    <div class="nav">
-      <a class="navs" data-section="about"><h2>About Me</h2></a>
-      <a class="navs" data-section="skills"><h2>My Skills</h2></a>
-      <a class="navs" data-section="contacts"><h2>Contact Me</h2></a>
-    </div>
-</div>
-  <div class="container" id="container">
-    <section class="hero">
-      <div class="hero_content">
-        <img id="me" src="./assets/images/image.png" alt="My Picture">
-        <div class="hero_text section_text">
-          <h1>Hi, I'm <span>Akhand Soni</span></h1>
-          <h2>
-            First Year Integrated M.Tech Student • Future Developer • 
-            Professional Bug Creator
-          </h2>
-          <p>
-            Learning HTML, CSS and slowly winning battles
-            against JavaScript.
-          </p>
-        </div>
-      </div>
-    </section>
-    <hr class="port_hr" id="about">
-    <section class="about">
-      <div class="about_content">
-        <div id="about_img">
-          <img src="./assets/images/about.png" alt="picture of a computer">
-        </div>
-        <div class="about_text section_text">
-          <h1>About Me</h1>
-          <h2>
-              Hey! I'm Akhand, a first year Software Engineering student
-              exploring different areas of tech including
-              AI/ML, Web Development and Programming.
-          </h2>
-          <p>
-              Interested in AI/ML, Web Development and building projects
-              that look cool enough to hide the bugs inside them.
-          </p>
-          <p>
-              Most of my time goes into:
-          </p>
-          <ul>
-              <li>Watching coding tutorials at 2x speed</li>
-              <li>Googling error messages professionally</li>
-              <li>Pretending I understand JavaScript closures</li>
-              <li>Building projects instead of studying</li>
-          </ul>
-          <p>
-              My current life mission is to combine
-              Artificial Intelligence,
-              creativity and sleep deprivation into real projects.
-          </p>
-        </div>
-      </div>
-    </section>
-    <hr class="port_hr" id="skills">
-    <section class="skills">
-      <div class="skill_content">
-        <div id="skill_img">
-          <img src="./assets/images/skills.png" alt="picture of few gears and a code behind it">
-        </div>
-        <div class="section_text skils_text">
-          <h1>My Skills</h1>
-          <h2>
-              Things I know • Things I'm learning • Things I pretend to know
-          </h2>
-          <ul>
-              <li>HTML — Can finally center a div</li>
-              <li>CSS — Professional color picker</li>
-              <li>JavaScript — Console.log expert</li>
-              <li>Python — AI/ML starter pack installed</li>
-              <li>C/C++ — Fighting segmentation faults daily</li>
-              <li>GitHub — Uploading bugs publicly</li>
-              <li>AI/ML — Teaching machines before teaching myself</li>
-              <li>Problem Solving — Sometimes the problem wins</li>
-          </ul>
-          <p>
-              Currently learning how to turn random ideas
-              into projects that actually work.
-          </p>
-        </div>
-      </div>
-    </section>
-    <hr class="port_hr" id="contacts">
-    <section class="contacts">
-      <div class="contacts_content">
-        <div id="contact_img">
-          <img src="./assets/images/contact.png" alt="image of phone">
-        </div>
-        <div class="contact_text section_text">
-          <h1>Contact Me</h1>
-          <h2>
-              Have a project idea, coding meme or emotional support for debugging?
-          </h2>
-          <p>
-              Feel free to reach out.
-              Unless you're my compiler.
-          </p>
-          <ul>
-              <li>📧 Email - akhandsoni2007@gmail.com</li>
-              <li>💻 GitHub - <a href="https://github.com/AkhandSoni">AkhandSoni</a></li>
-              <li>📸 Instagram - <a href="https://www.instagram.com/akhand_soni/">akhand_soni</a></li>
-              <li>💼 <a href="https://linkedin.com/in/akhand-soni-1171843ab">LinkedIn</a></li>
-          </ul>
-          <p>
-              Current response speed depends on:
-          </p>
-          <ul>
-              <li>WiFi strength</li>
-              <li>Caffeine level</li>
-              <li>Number of unresolved bugs</li>
-          </ul>
-          <p>
-              Warning:
-              clicking “Send Message” may summon a sleep-deprived developer.
-          </p>
-        </div>
-      </div>
-    </section>
-    <hr class="port_hr">
   </div>
-  <script>
-  document.querySelectorAll(".navs").forEach(link => {
-    link.addEventListener("click", () => {
-      const sectionId = link.dataset.section;
-      if(sectionId){
-        document.getElementById(sectionId).scrollIntoView({
-          behavior: "smooth"
-        });
-      }
-    });
-  });
-  </script>
+
+  <div class="scene">
+    <div class="table"></div>
+    <div class="tech-field" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    <div class="key-light"></div>
+    <div class="edge-light"></div>
+
+    <header class="brand-mark"><a href="#" data-go="0">AKHAND<span>.ME</span></a></header>
+    <div class="top-status"><span class="status-dot"></span><span>OPEN TO BUILD</span></div>
+
+    <main class="card-scroll" id="cardScroll" aria-label="Portfolio cards">
+      <section class="slide" data-title="Introduction" data-short="INTRO">
+        <article class="card obsidian hero-card">
+          <div class="card-glow"></div>
+          <div class="card-content">
+            <div class="card-top">
+              <div class="issuer">
+                <div class="logo-mark">A</div>
+                <div>
+                  <div class="issuer-name">AKHAND SONI</div>
+                  <div class="card-label">SOFTWARE ENGINEERING</div>
+                </div>
+              </div>
+              <div class="card-index">01</div>
+            </div>
+            <div class="hero-copy">
+              <div class="eyebrow">VIT VELLORE · 2ND YEAR</div>
+              <h1>Building things<br><em>worth exploring.</em></h1>
+              <p>Integrated M.Tech student exploring software engineering, AI/ML, backend systems and creative
+                interfaces.</p>
+            </div>
+            <div class="card-bottom">
+              <div class="signature">AKHAND SONI</div>
+              <div class="mini-type">PORTFOLIO / 2026</div>
+            </div>
+          </div>
+        </article>
+        <div class="card-shadow"></div>
+      </section>
+
+      <section class="slide" data-title="About me" data-short="ABOUT">
+        <article class="card titanium theme-light">
+          <div class="card-content">
+            <div class="card-top">
+              <div>
+                <div class="eyebrow">02 / ABOUT</div>
+                <h2>About Me</h2>
+              </div>
+              <div class="seal">AS</div>
+            </div>
+            <div class="about-layout">
+              <img class="profile-photo" src="./assets/images/image.png" alt="Akhand Soni">
+              <div>
+                <p class="large-copy">I'm Akhand — a second-year Integrated M.Tech Software Engineering student at VIT
+                  Vellore.</p>
+                <p>I like learning by building: from my first backend experiment to larger systems involving
+                  recommendation, embeddings, APIs and product interfaces.</p>
+                <p class="muted">Curiosity first. Build it. Break it. Understand why.</p>
+              </div>
+            </div>
+            <div class="card-bottom">
+              <div><span class="micro-label">INTERESTS</span><strong>AI/ML · WEB · SYSTEMS · UI</strong></div>
+              <div class="micro-label">VIT VELLORE</div>
+            </div>
+          </div>
+        </article>
+        <div class="card-shadow"></div>
+      </section>
+
+      <section class="slide" data-title="Toolkit" data-short="STACK">
+        <article class="card sapphire">
+          <div class="card-content">
+            <div class="card-top">
+              <div>
+                <div class="eyebrow">03 / TOOLKIT</div>
+                <h2>What I Build With</h2>
+              </div>
+              <div class="contactless"></div>
+            </div>
+            <div class="skills-layout">
+              <div class="skill-group"><span>LANGUAGES</span><b>C</b><b>C++</b><b>Java</b><b>Python</b><b>JavaScript</b>
+              </div>
+              <div class="skill-group"><span>WEB / APP</span><b>HTML</b><b>CSS</b><b>Node.js</b><b>React
+                  Native</b><b>Expo</b></div>
+              <div class="skill-group"><span>DATA /
+                  ML</span><b>PostgreSQL</b><b>Supabase</b><b>PyTorch</b><b>Qdrant</b><b>Redis</b></div>
+              <div class="skill-group"><span>TOOLS</span><b>Git</b><b>GitHub</b><b>Docker</b><b>Linux</b></div>
+            </div>
+            <div class="card-bottom">
+              <div class="mini-type">LEARNING IN PUBLIC</div>
+              <div class="mini-type">BUILD → DEBUG → REPEAT</div>
+            </div>
+          </div>
+        </article>
+        <div class="card-shadow"></div>
+      </section>
+
+      <section class="slide" data-title="Weave" data-short="WEAVE">
+        <article class="card weave-showcase">
+          <div class="showcase-heading"><span>04 / FEATURED PROJECT</span><strong>WEAVE</strong><em>HOVER A LAYER TO
+              EXPAND</em></div>
+          <div class="weave-panels" aria-label="Weave product, backend, and machine-learning layers">
+            <article class="weave-panel product-panel" tabindex="0" aria-label="Weave product and frontend layer">
+              <div class="panel-index">01</div>
+              <div class="panel-intro"><span>FRONTEND</span>
+                <h2>Product</h2>
+              </div>
+              <div class="panel-detail">
+                <p>A mobile-first space for discovering, saving and exploring technical work.</p>
+                <p class="muted" style="margin-top: 10px; font-size: 13px; font-style: italic;">(Basically Reels for
+                  nerds, but without the dancing.)</p>
+                <div class="tech-row"><span>EXPO</span><span>REACT NATIVE</span><span>NATIVEWIND</span></div><a
+                  class="card-link" href="https://github.com/AkhandSoni/Weave" target="_blank" rel="noopener">VIEW
+                  PRODUCT ↗</a>
+              </div>
+            </article>
+            <article class="weave-panel backend-panel" tabindex="0" aria-label="Weave backend layer">
+              <div class="panel-index">02</div>
+              <div class="panel-intro"><span>BACKEND</span>
+                <h2>Systems</h2>
+              </div>
+              <div class="panel-detail">
+                <p>APIs, persistence and data flow connect the app to its intelligent discovery pipeline.</p>
+                <div class="tech-row"><span>NODE.JS</span><span>POSTGRES</span><span>SUPABASE</span><span>REDIS</span>
+                </div><a class="card-link" href="https://github.com/AkhandSoni/Weave" target="_blank"
+                  rel="noopener">VIEW PROJECT ↗</a>
+              </div>
+            </article>
+            <article class="weave-panel ml-panel" tabindex="0" aria-label="Weave machine-learning layer">
+              <div class="panel-index">03</div>
+              <div class="panel-intro"><span>MY CONTRIBUTION / ML</span>
+                <h2>Intelligence</h2>
+              </div>
+              <div class="panel-detail">
+                <p>The engine behind Weave's feed: repository enrichment, embeddings, Qdrant indexing, retrieval,
+                  ranking, feed assembly and feedback processing.</p>
+                <div class="tech-row"><span>PYTHON</span><span>QDRANT</span><span>FASTAPI</span><span>REDIS</span></div>
+                <a class="button-link" href="https://github.com/AkhandSoni/gh-social-ml" target="_blank"
+                  rel="noopener">VIEW ML REPO ↗</a>
+              </div>
+            </article>
+          </div>
+          <div class="showcase-footer"><span>ACM-VIT / FULL-STACK DISCOVERY</span><span>PRODUCT · BACKEND · ML</span>
+          </div>
+        </article>
+      </section>
+
+      <section class="slide" data-title="SSS" data-short="SSS">
+        <article class="card emerald">
+          <div class="card-content">
+            <div class="card-top">
+              <div>
+                <div class="eyebrow gold">05 / CHROME EXTENSION</div>
+                <h2>SSS</h2>
+              </div>
+              <div class="seal">S³</div>
+            </div>
+            <div class="project-body">
+              <div class="project-tag">SPOILER SHIELD</div>
+              <p class="project-lead">A Chrome extension built around a simple problem: algorithmic feeds can spoil
+                plot-heavy content before you experience it.</p>
+              <p>The project explores a browser-level solution for reducing unwanted spoilers while browsing modern
+                content feeds.</p>
+              <div class="tech-row"><span>CHROME</span><span>EXTENSION</span><span>CSS</span><span>WEB</span></div>
+            </div>
+            <div class="card-bottom">
+              <div class="micro-label">S³ / SPOILER CONTROL</div><a class="card-link"
+                href="https://github.com/AkhandSoni/SSS" target="_blank" rel="noopener">VIEW REPOSITORY ↗</a>
+            </div>
+          </div>
+        </article>
+        <div class="card-shadow"></div>
+      </section>
+
+      <section class="slide" data-title="BlurTalk" data-short="BLURTALK">
+        <article class="card carbon">
+          <div class="card-content">
+            <div class="card-top">
+              <div>
+                <div class="eyebrow red">06 / FIRST BACKEND TRY</div>
+                <h2>BlurTalk</h2>
+              </div>
+              <div class="project-number">03</div>
+            </div>
+            <div class="project-body">
+              <div class="project-tag">THE BEGINNING</div>
+              <p class="project-lead">My first serious attempt at understanding how a backend actually works.</p>
+              <p>BlurTalk is a mini full-stack backend project built around Node.js, Express and MongoDB, with
+                authentication, protected routes and basic social interactions.</p>
+              <div class="tech-row">
+                <span>NODE.JS</span><span>EXPRESS</span><span>MONGODB</span><span>JWT</span><span>EJS</span></div>
+            </div>
+            <div class="card-bottom">
+              <div class="micro-label">LEARNING MILESTONE</div><a class="card-link"
+                href="https://github.com/AkhandSoni/BlurTalk" target="_blank" rel="noopener">VIEW REPOSITORY ↗</a>
+            </div>
+          </div>
+        </article>
+        <div class="card-shadow"></div>
+      </section>
+
+      <section class="slide" data-title="Contact" data-short="CONTACT">
+        <article class="card obsidian contact-card">
+          <div class="card-glow"></div>
+          <div class="card-content">
+            <div class="card-top">
+              <div>
+                <div class="eyebrow">07 / CONTACT</div>
+                <h2>Let's build something.</h2>
+              </div>
+              <div class="seal">AS</div>
+            </div>
+            <div class="contact-layout">
+              <img src="./assets/images/contact.png" alt="Stylized phone and chat bubble illustration">
+              <div>
+                <p class="project-lead">Have an interesting idea, project, collaboration or just want to talk tech?</p>
+                <p>I'm always interested in building, learning and meeting people who like doing the same.</p>
+                <a class="email-cta" href="mailto:akhandsoni2007@gmail.com">EMAIL ME <span>↗</span></a>
+                <div class="contact-links">
+                  <a href="https://github.com/AkhandSoni" target="_blank" rel="noopener"><span>GITHUB</span>AkhandSoni
+                    ↗</a>
+                  <a href="https://linkedin.com/in/akhand-soni-1171843ab" target="_blank"
+                    rel="noopener"><span>LINKEDIN</span>akhand-soni ↗</a>
+                  <a href="https://www.instagram.com/akhand_soni/" target="_blank"
+                    rel="noopener"><span>INSTAGRAM</span>@akhand_soni ↗</a>
+                </div>
+              </div>
+            </div>
+            <div class="card-bottom">
+              <div class="signature">AKHAND SONI</div>
+              <div class="mini-type">THANKS FOR STOPPING BY</div>
+            </div>
+          </div>
+        </article>
+        <div class="card-shadow"></div>
+      </section>
+    </main>
+
+    <div class="collection-ui" aria-live="polite">
+      <div class="collection-name">AKHAND SONI / PRIVATE COLLECTION</div>
+      <div class="active-title" id="currentTitle">INTRODUCTION</div>
+      <div class="nav-dots" id="navDots" aria-label="Card navigation dots"></div>
+    </div>
+
+    <nav class="controls" aria-label="Portfolio navigation"><button id="prevBtn"
+        aria-label="Previous card">←</button><button id="nextBtn" aria-label="Next card">→</button></nav>
+    <div class="swipe-hint"><span class="hint-desktop">DRAG / SCROLL</span><span class="hint-mobile">SWIPE</span><span
+        class="swipe-line"></span></div>
+    <div class="vignette"></div>
+  </div>
+  <script src="./script.js"></script>
 </body>
-<footer>
-  © 2026 Akhand.dev | Built with HTML, CSS, caffeine & questionable decisions.
-</footer>
+
 </html>
