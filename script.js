@@ -95,6 +95,7 @@ window.addEventListener("keydown", (event) => {
 });
 
 scroller.addEventListener("pointerdown", (event) => {
+  if (event.pointerType !== "mouse") return;
   if (event.target.closest("a, button")) return;
 
   pointerDown = true;
@@ -125,6 +126,7 @@ scroller.addEventListener("pointerup", finishPointer);
 scroller.addEventListener("pointercancel", finishPointer);
 
 scroller.addEventListener("wheel", (event) => {
+  if (event.target.closest(".weave-panels")) return;
   if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
 
   event.preventDefault();
