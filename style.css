@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
 /* font-display: swap is handled via the &display=swap param above */
 
 :root {
@@ -13,7 +13,7 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 html, body { width: 100%; height: 100%; overflow: hidden; background: var(--bg); }
-body { color: var(--cream); font-family: Inter, system-ui, sans-serif; }
+body { color: var(--cream); font-family: 'Inter', system-ui, sans-serif; }
 button, a { color: inherit; font: inherit; }
 a { text-decoration: none; }
 
@@ -112,7 +112,7 @@ a { text-decoration: none; }
   transition: transform .7s var(--ease), box-shadow .7s var(--ease), filter .7s ease;
 }
 .card::before { position: absolute; z-index: 2; inset: 0; content: ""; pointer-events: none; background: linear-gradient(115deg, rgba(255,255,255,.16), transparent 15%, transparent 68%, rgba(255,255,255,.045)); }
-.card::after { position: absolute; z-index: 1; inset: 0; content: ""; pointer-events: none; background: repeating-linear-gradient(100deg, transparent 0 6px, rgba(255,255,255,.01) 7px, transparent 9px); }
+.card::after { position: absolute; z-index: 10; inset: 0; content: ""; pointer-events: none; mix-blend-mode: overlay; opacity: 0.05; border-radius: inherit; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); }
 .card-shadow { position: absolute; z-index: -2; width: min(820px, 80vw, calc((100svh - 178px) * 1.52)); aspect-ratio: 1.586 / 1; border-radius: 20px; background: #080909; transform: translate(12px, 32px) translateZ(-40px) rotate(.6deg); box-shadow: 0 30px 50px rgba(0,0,0,.55); }
 .card-glow { position: absolute; inset: -25%; background: radial-gradient(circle at 20% 15%, rgba(255,255,255,.15), transparent 25%); filter: blur(22px); pointer-events: none; }
 .card-content { position: absolute; z-index: 3; inset: 0; display: flex; flex-direction: column; justify-content: space-between; padding: clamp(29px, 6%, 58px); }
@@ -121,14 +121,14 @@ a { text-decoration: none; }
 
 .issuer { display: flex; align-items: center; gap: 12px; }
 .logo-mark, .seal { display: grid; width: 35px; height: 35px; place-items: center; border: 1px solid currentColor; border-radius: 50%; font: 500 12px 'DM Mono', monospace; }
-.issuer-name { font-size: 12px; font-weight: 600; letter-spacing: 3px; }
+.issuer-name { font-family: 'Outfit', system-ui, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 3px; }
 .card-label, .eyebrow, .micro-label, .project-tag, .mini-type, .active-title { font: 500 clamp(9px, .7vw, 11px) 'DM Mono', monospace; letter-spacing: 1.8px; }
 .card-label { margin-top: 5px; color: var(--subtle); }
 .eyebrow { margin-bottom: 13px; color: var(--subtle); }
 .eyebrow.red { color: #f09a9a; }
 .eyebrow.gold { color: #edd28c; }
 .card-index, .project-number { color: var(--subtle); font: 12px 'DM Mono', monospace; }
-h1, h2, h3 { color: var(--text); font-weight: 500; line-height: .98; }
+h1, h2, h3 { font-family: 'Outfit', system-ui, sans-serif; color: var(--text); font-weight: 500; line-height: .98; }
 h1 { font-size: clamp(44px, 5.2vw, 76px); letter-spacing: -3.5px; }
 h1 em { color: var(--gold); font-style: normal; }
 h2 { font-size: clamp(36px, 4vw, 56px); letter-spacing: -2.5px; }
@@ -139,6 +139,7 @@ p { color: var(--copy); font-size: clamp(14px, 1.12vw, 17px); line-height: 1.65;
 .hero-copy p { max-width: 540px; margin-top: 23px; }
 .signature { font: 500 14px 'DM Mono', monospace; letter-spacing: 2px; }
 .mini-type, .micro-label { color: var(--subtle); }
+.micro-label::before, .project-tag::before { content: ""; display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); margin-right: 8px; box-shadow: 0 0 6px var(--gold); vertical-align: middle; }
 .card-bottom strong { display: block; margin-top: 7px; color: var(--text); font: 500 11px 'DM Mono', monospace; letter-spacing: 1px; }
 
 .obsidian { background: radial-gradient(circle at 78% 20%, rgba(255,255,255,.08), transparent 25%), linear-gradient(115deg, #08090a, #292c2e 30%, #0a0b0c 55%, #292d30 74%, #060707); }
@@ -170,6 +171,8 @@ p { color: var(--copy); font-size: clamp(14px, 1.12vw, 17px); line-height: 1.65;
 .ml-panel .button-link { background: #182024; color: #fff; }
 .panel-index, .panel-intro, .panel-detail { position: relative; z-index: 1; }
 .panel-index { color: currentColor; font: 500 11px 'DM Mono', monospace; letter-spacing: 2px; opacity: .58; }
+
+.cursor-glow { position: fixed; top: -300px; left: -300px; width: 600px; height: 600px; background: radial-gradient(circle closest-side, rgba(216, 189, 125, 0.08), transparent); border-radius: 50%; pointer-events: none; z-index: 9999; opacity: 0; will-change: transform, opacity; transition: opacity 0.4s ease; mix-blend-mode: screen; }
 .panel-intro span { display: block; margin-bottom: 10px; color: currentColor; font: 500 9px 'DM Mono', monospace; letter-spacing: 1.6px; opacity: .68; }
 .panel-intro h2 { font-size: clamp(31px, 3.5vw, 52px); letter-spacing: -2.5px; }
 .panel-detail { max-width: 520px; visibility: hidden; opacity: 0; transform: translateY(14px); transition: opacity .25s ease, transform .35s ease, visibility .25s; }
