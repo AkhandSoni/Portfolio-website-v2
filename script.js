@@ -60,8 +60,10 @@ function syncCurrent() {
     }
   });
 
-  current = closest;
-  updateUI();
+  if (current !== closest) {
+    current = closest;
+    updateUI();
+  }
 }
 
 prevBtn.addEventListener("click", () => goTo(current - 1));
@@ -133,9 +135,15 @@ scroller.addEventListener("wheel", (event) => {
   window.setTimeout(() => { wheelLock = false; }, 650);
 }, { passive: false });
 
+let isScrolling = false;
 scroller.addEventListener("scroll", () => {
-  clearTimeout(scrollTimer);
-  scrollTimer = window.setTimeout(syncCurrent, 100);
+  if (!isScrolling) {
+    window.requestAnimationFrame(() => {
+      syncCurrent();
+      isScrolling = false;
+    });
+    isScrolling = true;
+  }
 });
 
 slides.forEach((slide) => {
@@ -209,3 +217,17 @@ slides.forEach((slide) => {
 
 window.addEventListener("resize", syncCurrent);
 updateUI();
+
+/* ── Ambient Cursor Glow ── */
+const cursorGlow = document.createElement('div');
+cursorGlow.className = 'cursor-glow';
+document.body.appendChild(cursorGlow);
+
+document.addEventListener('mousemove', (e) => {
+  cursorGlow.style.opacity = 1;
+  cursorGlow.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+});
+
+document.addEventListener('mouseleave', () => {
+  cursorGlow.style.opacity = 0;
+});
