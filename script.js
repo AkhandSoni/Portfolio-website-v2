@@ -95,6 +95,7 @@ window.addEventListener("keydown", (event) => {
 });
 
 scroller.addEventListener("pointerdown", (event) => {
+  if (event.pointerType !== "mouse") return;
   if (event.target.closest("a, button")) return;
 
   pointerDown = true;

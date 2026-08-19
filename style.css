@@ -327,9 +327,11 @@ p { color: var(--copy); font-size: clamp(14px, 1.12vw, 17px); line-height: 1.65;
   .showcase-heading { top: 23px; left: 22px; right: 22px; font-size: 8px; }
   .showcase-heading strong { font-size: 11px; }
   .showcase-heading em { display: none; }
-  .weave-panels { position: absolute; inset: 0; padding: 75px 22px 50px; display: flex; flex-direction: column; gap: 16px; overflow-y: auto; overflow-x: hidden; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .weave-panels { position: absolute; inset: 0; padding: 75px 0 50px; display: flex; flex-direction: row; gap: 16px; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch; scroll-padding: 0 5vw; }
   .weave-panels::-webkit-scrollbar { display: none; }
-  .weave-panel, .weave-panels:hover .weave-panel:not(:hover), .weave-panels:focus-within .weave-panel:not(:focus-within) { position: relative; width: 100% !important; height: auto !important; top: auto !important; left: auto !important; padding: 25px 20px !important; opacity: 1 !important; filter: none !important; transform: none !important; box-shadow: 0 10px 25px rgba(0,0,0,.15) !important; flex-shrink: 0 !important; }
+  .weave-panels::after { content: ""; flex: 0 0 1vw; }
+  .weave-panel, .weave-panels:hover .weave-panel:not(:hover), .weave-panels:focus-within .weave-panel:not(:focus-within) { position: relative; width: 82vw !important; height: 100% !important; top: auto !important; left: auto !important; padding: 25px 20px !important; opacity: 1 !important; filter: none !important; transform: none !important; box-shadow: 0 10px 25px rgba(0,0,0,.15) !important; flex-shrink: 0 !important; scroll-snap-align: center; }
+  .weave-panel:first-child { margin-left: 5vw; }
   .weave-panel::before { opacity: 1; }
   .panel-detail { visibility: visible !important; opacity: 1 !important; transform: translateY(0) !important; margin-top: 15px; }
   .panel-intro h2 { font-size: clamp(26px, 7vw, 34px); }
